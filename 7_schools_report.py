@@ -33,8 +33,8 @@ for school in schools:
             print(f"Graduation Rate for Women: {school['Graduation rate  women (DRVGR2020)']}")
             print()
             print()
-
-for school in schools:
     if school['Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)'] < 50000:
         print(f"University Name: {school['instnm']}")
-        print(f"Cost")
+        print(f"Total Price: {school['Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)']}")
+        print()
+        print()
