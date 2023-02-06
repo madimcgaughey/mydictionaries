@@ -211,9 +211,9 @@ for produce in ProduceDictionary:
     cost = ProduceDictionary[produce]['cost']
     amt_sold = ProduceDictionary[produce]['amt_sold']
     total = ProduceDictionary[produce]['total']
-    cal_total = cost * amt_sold
+    cal_total = round(cost * amt_sold,2)
     if round(cal_total, 2) != total:
-        print("Produce Name:",produce,"\n","Calculated Total: $",round(cal_total,2),"\n","Stated Total: $",total, "\n" )
-       # print("Calculated Total: $",round(cal_total,2))
-       # print("Stated Total: $",total)
-      #  print()
+        print(f"Produce Name: {produce}")
+        print(f"Calculated Total: $",round(cal_total,2))
+        print(f"Stated Total: ${total:,.2f}")
+        print()
