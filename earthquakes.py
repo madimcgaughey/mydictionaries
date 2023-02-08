@@ -36,10 +36,10 @@ Latitude: 14.7628
 
 import json
 infile = open('eq_data.json','r')
-earthquakes = json.load(infile)
+eq = json.load(infile)
 
 # 1) print out the number of earthquakes
-print(len(earthquakes))
+print(len(eq))
 
 # 2) iterate through the dictionary and extract the location, magnitude, 
    #longitude and latitude of the location and put it in a new
@@ -47,9 +47,14 @@ print(len(earthquakes))
    #magnitude > 6. Print out the new dictionary.
 
 eq_dict = {}
+for earthquake in eq:
+    location = 
+    magnitude =
+    longitude =
+    latitude =
+    if magnitude > 6:
+        eq_dict += earthquake
+print(eq_dict)
 
-
-if magnitude > 6:
-    print
 
 # 3) using the eq_dict dictionary, print out the information as shown below (first three shown):
