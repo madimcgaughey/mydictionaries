@@ -47,19 +47,24 @@ print(len(eq["features"]))
    #magnitude > 6. Print out the new dictionary.
 
 eq_dict = {}
+
 for earthquake in eq:
-    location = earthquake['location']
-    magnitude = earthquake['magnitude']
-    longitude = earthquake['longitude']
-    latitude = earthquake['latitude']
+    location = eq['features']['place']
+    magnitude = eq['properties']['mag']
+    longitude = eq['geometry']['coordinates'][0]
+    latitude = eq['geometry']['coordinates'][1]
     if magnitude > 6:
-        print()
+        eq_dict[location] = location
+        eq_dict[magnitude] = magnitude
+        eq_dict[longitude] = longitude
+        eq_dict[latitude] = latitude
 
-
-       # eq_dict += earthquake
-#print(eq_dict)
-
+print(eq_dict)
 
 # 3) using the eq_dict dictionary, print out the information as shown below (first three shown):
 
+print(f"Location: {location}")
+print(f"Magnitude: {magnitude}")
+print(f"Longitude: {longitude}")
+print(f"Latitude: {latitude}")
 
