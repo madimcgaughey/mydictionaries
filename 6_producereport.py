@@ -214,6 +214,6 @@ for produce in ProduceDictionary:
     cal_total = round(cost * amt_sold,2)
     if round(cal_total, 2) != total:
         print(f"Produce Name: {produce}")
-        print(f"Calculated Total: $",round(cal_total,2))
+        print(f"Calculated Total: ${cal_total:,.2f}")
         print(f"Stated Total: ${total:,.2f}")
         print()
