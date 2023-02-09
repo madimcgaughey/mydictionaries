@@ -53,7 +53,7 @@ for earthquake in eq:
     magnitude = eq['features'][0]['properties']['mag']
     longitude = eq['features'][1]['geometry']['coordinates'][0]
     latitude = eq['features'][1]['geometry']['coordinates'][1]
-    if magnitude > 6:
+    if eq['features'][0]['properties']['mag'] > 6:
         eq_dict['location'] = location
         eq_dict['magnitude'] = magnitude
         eq_dict['longitude'] = longitude
